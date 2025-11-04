@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloreSer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <img src="Imagenes/LogoFloreSer.png" alt="Logo FloreSer" class="logo">
+
+  <h1 class="titulo">FloreSer</h1>
+
+  <div class="contenedor">
+
+    <div class="hamburguesa" id="hamburguesa">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav class="menu-lateral" id="menu-lateral">
+      <a href="Plantas.html">Plantas</a>
+      <a href="InfoFlores.html">¿Cuándo regalar flores?</a>
+      <a href="Cuidado.html">Mantenimiento</a>
+    </nav>
+
+    <div class="carrusel">
+      <div class="imagenes" id="imagenes">
+        <img src="Imagenes/Flores.jpeg" alt="Flores 1">
+        <img src="Imagenes/Cuidado.jpeg" alt="Flores 2">
+        <img src="Imagenes/Regalar.jpeg" alt="Flores 3">
+        <img src="Imagenes/Conocernos.jpeg" alt="Flores 4">
+        <img src="Imagenes/Conocernos1.jpeg" alt="Flores 5">
+        <img src="Imagenes/Medicinal.jpeg" alt="Plantas medicinales">
+      </div>
+
+      <button class="flecha izquierda" id="prev">&#10094;</button>
+      <button class="flecha derecha" id="next">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="contacto">
+    <a href="https://www.instagram.com/_floreser_47/?next=%2F" target="_blank" class="link-instagram">_floreser_47</a>
+    <img src="Imagenes/LogoInsta.png" alt="Instagram" class="icono-instagram">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const imagenes = document.getElementById("imagenes");
+      const total = imagenes.children.length;
+      let index = 0;
+
+      function moverCarrusel() {
+        index = (index + 1) % total;
+        imagenes.style.transform = "translateX(-" + (index * 100) + "%)";
+      }
+
+      setInterval(moverCarrusel, 3000);
+
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+
+      next.addEventListener("click", function() {
+        index = (index + 1) % total;
+        imagenes.style.transform = "translateX(-" + (index * 100) + "%)";
+      });
+
+      prev.addEventListener("click", function() {
+        index = (index - 1 + total) % total;
+        imagenes.style.transform = "translateX(-" + (index * 100) + "%)";
+      });
+
+      const hamburguesa = document.getElementById("hamburguesa");
+      const menu = document.getElementById("menu-lateral");
+
+      hamburguesa.addEventListener("click", function() {
+        menu.classList.toggle("activo");
+      });
+    });
+  </script>
+</body>
+
+</html>
