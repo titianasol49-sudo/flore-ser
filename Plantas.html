@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flores y Plantas Medicinales</title>
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Enlace al CSS externo -->
+  <link rel="stylesheet" href="Plantas.css">
+</head>
+
+<body>
+
+  <!-- Carrito flotante -->
+  <div class="carrito" title="Carrito">
+    <img src="Imagenes/Carrito.png" alt="Carrito de compras">
+  </div>
+
+  <!-- Sección FLORES -->
+  <section class="seccion">
+    <h2>FLORES</h2>
+    <div class="carrusel-contenedor">
+      <button class="flecha izquierda" onclick="moverCarrusel('flores', -1)" aria-label="Anterior">&#10094;</button>
+      <div class="carrusel" id="flores">
+
+        <div class="cuadro">
+          <img src="Imagenes/RRosas.jpeg" alt="Ramo de rosas">
+          <p>Rosa</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/RMargaritas.jpeg" alt="Ramo de margaritas">
+          <p>Margarita</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/RClaveles.jpeg" alt="Ramo de claveles">
+          <p>Clavel</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/RGirasoles.jpeg" alt="Ramo de girasoles">
+          <p>Girasol</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+        <div class="cuadro">
+          <img src="Imagenes/RDalias.jpeg" alt="Ramo de dalias">
+          <p>Dalia</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/RTulipanes.jpeg" alt="Ramo de tulipanes">
+          <p>Tulipán</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/RHortensias.jpeg" alt="Ramo de hortensias">
+          <p>Hortensia</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/RLirios.jpeg" alt="Ramo de lirios">
+          <p>Lirio</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+
+      </div>
+      <button class="flecha derecha" onclick="moverCarrusel('flores', 1)" aria-label="Siguiente">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <h2>PLANTAS MEDICINALES</h2>
+    <div class="carrusel-contenedor">
+      <button class="flecha izquierda" onclick="moverCarrusel('plantas', -1)" aria-label="Anterior">&#10094;</button>
+      <div class="carrusel" id="plantas">
+
+        <div class="cuadro">
+          <img src="Imagenes/AloeVera.jpeg" alt="Aloe Vera">
+          <p >Aloe Vera</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/Tilo.jpeg" alt="Tilo">
+          <p> Tilo </p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/Romero.jpeg" alt="Romero">
+          <p> Romero </p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/Menta.jpeg" alt="Menta">
+          <p>Menta</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/Boldo.jpeg" alt="Boldo">
+          <p>Boldo</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="cuadro">
+          <img src="Imagenes/Salvia.jpeg" alt="Salvia">
+          <p>Salvia</p>
+          <p>$0.00</p>
+          <button class="boton">Agregar al carrito</button>
+        </div>
+
+      </div>
+      <button class="flecha derecha" onclick="moverCarrusel('plantas', 1)" aria-label="Siguiente">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    // Movimiento del carrusel con flechas
+    function moverCarrusel(id, direccion) {
+      const carrusel = document.getElementById(id);
+      if (!carrusel) return;
+      const desplazamiento = carrusel.querySelector('.cuadro').clientWidth * 3; // mueve 3 cuadros por vez
+      carrusel.scrollBy({ left: direccion * desplazamiento, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background-color: #f2dcdc;
+  font-family: 'Cormorant Garamond', serif;
+  color: #57331D;
+  margin: 20px;
+  font-size: 26px;
+}
+
+h2, h3 {
+  margin: 10px 0;
+}
+
+.Contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid #57331D;
+  background-color: #f8e9e9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.Item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #57331D;
+  border-radius: 8px;
+}
