@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flores y Plantas Medicinales</title>
 
-  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Enlace al CSS externo -->
   <link rel="stylesheet" href="Plantas.css">
 </head>
 
 <body>
 
-  <!-- Carrito flotante -->
   <div class="carrito" title="Carrito">
     <img src="Imagenes/Carrito.png" alt="Carrito de compras">
   </div>
 
-  <!-- Sección FLORES -->
+  <a href="Index.html" class="menu-boton">
+    <img src="Imagenes/casita.png" alt="Inicio">
+  </a>
+
   <section class="seccion">
     <h2>FLORES</h2>
     <div class="carrusel-contenedor">
@@ -141,9 +141,8 @@
     </div>
   </section>
 
-  <!-- SCRIPT -->
   <script>
-    // Movimiento del carrusel con flechas
+  
     function moverCarrusel(id, direccion) {
       const carrusel = document.getElementById(id);
       if (!carrusel) return;
