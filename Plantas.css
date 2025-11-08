@@ -148,7 +148,7 @@ h2 {
 }
 
 .menu-boton img {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 85px;
   display: inline-block;
